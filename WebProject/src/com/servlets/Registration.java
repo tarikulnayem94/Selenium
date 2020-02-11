@@ -1,13 +1,16 @@
 package com.servlets;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.interfaces.IReg;
 import com.models.RegModel;
+import com.services.RegService;
 
 /**
  * Servlet implementation class Registration
@@ -52,6 +55,9 @@ public class Registration extends HttpServlet {
 		regModel.setLastName(lastName);
 		regModel.setPhone(phone);
 		regModel.setEmail(email);
+		
+		IReg obj = new RegService();
+		obj.add(regModel);
 	
 	}
 
