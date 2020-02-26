@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+    <script> 
+        <!-- jQuery code to show the working of hover() method -->
+        $(document).ready(function() { 
+            $("p").hover(function() { 
+                $(this).css("background-color", "green"); 
+            }, function() { 
+                $(this).css("background-color", "yellow"); 
+            }); 
+        }); 
+    </script> 
+    <style> 
+        p { 
+            width: 55%; 
+            height: 80px; 
+            padding: 20px; 
+            margin: 10px; 
+            border: 2px solid green; 
+            font-size: 50px; 
+        } 
+    </style> 
+
 <meta charset="ISO-8859-1">
 <title> My Testing Web Site </title>
 </head>
 <h1> First Web Project </h1>
 <body>
+  <!--move the mouse in and out over this paragraph 
+        and background color will change-->
+    <p>Mouse Hover on Me !</p> 
+
 <form action = "Registration" method = "post">
 FirstName <input type="text" name="firstname"><br>
 LastName <input type="text" name="Lastname"><br>
