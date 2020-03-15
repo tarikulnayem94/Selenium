@@ -1,0 +1,25 @@
+package com.Listeners;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+public class ListenerImplement 
+{
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\bb\\Desktop\\JavaCode"
+				+ "\\SeleniumTestAutomation\\src\\test\\resources\\Drivers\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+		
+		EventListener listen = new EventListener();
+		EventFiringWebDriver browser = new EventFiringWebDriver(driver);
+		browser.register(listen);
+
+		driver.findElement(By.xpath("/html/body/div[2]/div/div/ul/li[1]/button")).click();
+		System.out.println(driver.switchTo().alert().getText());
+		driver.switchTo().alert().accept(); 
+	}
+}
+
+
