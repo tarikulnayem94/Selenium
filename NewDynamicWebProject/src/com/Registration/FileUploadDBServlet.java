@@ -80,6 +80,11 @@ public class FileUploadDBServlet extends HttpServlet {
 					ex.printStackTrace();
 				}
 			}
+			// sets the message in request scope
+            request.setAttribute("Message", message);
+             
+            // forwards to the message page
+            getServletContext().getRequestDispatcher("/Message.html").forward(request, response);
 		}
 	}
 }

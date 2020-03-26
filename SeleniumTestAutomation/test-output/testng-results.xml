@@ -1,61 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" ignored="2" total="5" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42035" started-at="2020-03-03T10:08:21Z" finished-at="2020-03-03T10:09:03Z">
+  <suite name="Suite" duration-ms="2510" started-at="2020-03-25T08:56:47Z" finished-at="2020-03-25T08:56:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="42035" started-at="2020-03-03T10:08:21Z" finished-at="2020-03-03T10:09:03Z">
-      <class name="com.TestNGtest.DataProviderImplement">
-        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGtest.DataProviderImplement@1bce4f0a]" name="loginTest" duration-ms="12351" started-at="2020-03-03T10:08:21Z" data-provider="searchData" finished-at="2020-03-03T10:08:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-          </params>
+    <test name="MultipleTest" duration-ms="2510" started-at="2020-03-25T08:56:47Z" finished-at="2020-03-25T08:56:49Z">
+      <class name="com.TestNGtest.TestCase1">
+        <test-method status="PASS" signature="BrowserConfig()[pri:0, instance:com.TestNGtest.TestCase1@6adede5]" name="BrowserConfig" is-config="true" duration-ms="17834" started-at="2020-03-25T08:56:29Z" finished-at="2020-03-25T08:56:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGtest.DataProviderImplement@1bce4f0a]" name="loginTest" duration-ms="13154" started-at="2020-03-03T10:08:33Z" data-provider="searchData" finished-at="2020-03-03T10:08:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- BrowserConfig -->
+        <test-method status="PASS" signature="f()[pri:0, instance:com.TestNGtest.TestCase1@6adede5]" name="f" duration-ms="15" started-at="2020-03-25T08:56:47Z" finished-at="2020-03-25T08:56:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.TestNGtest.DataProviderImplement@1bce4f0a]" name="loginTest" duration-ms="16441" started-at="2020-03-03T10:08:46Z" data-provider="searchData" finished-at="2020-03-03T10:09:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="SimpleTest()[pri:0, instance:com.TestNGtest.TestCase1@6adede5]" name="SimpleTest" duration-ms="2427" started-at="2020-03-25T08:56:47Z" finished-at="2020-03-25T08:56:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-      </class> <!-- com.TestNGtest.DataProviderImplement -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- SimpleTest -->
+        <test-method status="PASS" signature="TestClose()[pri:0, instance:com.TestNGtest.TestCase1@6adede5]" name="TestClose" is-config="true" duration-ms="6797" started-at="2020-03-25T08:56:49Z" finished-at="2020-03-25T08:56:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestClose -->
+      </class> <!-- com.TestNGtest.TestCase1 -->
+      <class name="com.TestNGtest.TestCase2">
+        <test-method status="FAIL" signature="f()[pri:0, instance:com.TestNGtest.TestCase2@2d928643]" name="f" duration-ms="3" started-at="2020-03-25T08:56:49Z" finished-at="2020-03-25T08:56:49Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.TestNGtest.TestCase2.f(TestCase2.java:8)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.TestNGtest.TestCase2 -->
+    </test> <!-- MultipleTest -->
+  </suite> <!-- Suite -->
 </testng-results>

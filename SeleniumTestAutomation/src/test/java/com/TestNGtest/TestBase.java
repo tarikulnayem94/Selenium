@@ -1,14 +1,15 @@
 package com.TestNGtest;
-import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
 public class TestBase {
 	WebDriver driver;
 	@Test
 	public void f() {
+		
 	}
 	@BeforeSuite
 	public void BrowserConfig() {
